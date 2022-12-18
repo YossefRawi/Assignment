@@ -52,18 +52,18 @@
     </div>
     <h1 class="hdr">AVAILABLE PRODUCTS</h1>
     <div class="imgs">
-    <img src="image/laptop-png-16.png" alt="no image">
-    <img src="image/laptop-png-23.png" alt="no image">  
-    <img src="image/laptop-png-27.png" alt="no image">
-    <img src="image/laptop-png-32.png" alt="no image">
-    <img src="image/laptop-png-33.png" alt="no image">
-    <img src="image/laptop-png-4.png" alt="no image">
-    <img src="image/laptop-png-8.png" alt="no image">
-    <img src="image/mac-laptop-png-15.png" alt="no image">
-    <img src="image/laptop-png-24.png" alt="no image">
-    <img src="image/laptop-png-28.png" alt="no image">
-    <img src="image/laptop-png-9.png" alt="no image">
-    <img src="image/laptop-png-21.png" alt="no image">
+    <img src="image/1.png" alt="no image">
+    <img src="image/2.png" alt="no image">  
+    <img src="image/3.png" alt="no image">
+    <img src="image/4.png" alt="no image">
+    <img src="image/5.png" alt="no image">
+    <img src="image/6.png" alt="no image">
+    <img src="image/7.png" alt="no image">
+    <img src="image/8.png" alt="no image">
+    <img src="image/9.png" alt="no image">
+    <img src="image/0.png" alt="no image">
+    <img src="image/10.png" alt="no image">
+    <img src="image/11.png" alt="no image">
     </div>
     <div class="buysell">
         
