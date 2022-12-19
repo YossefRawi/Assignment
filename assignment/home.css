@@ -194,12 +194,7 @@ a:hover{
     transition: 0.3s ease-in-out;
 
 }
-button:hover{
-    color: #1f2937;
-    background-color: white;
-    transform: translateY(25px);
 
-}
 .fter{
     background-color: #1f2937;
     color: white;
@@ -274,4 +269,18 @@ button:hover{
     border-radius: 10px;
     border: 1px solid white;
     letter-spacing: 5px;
+}
+
+.btn{
+    transition: none;
+}
+
+
+form{
+    margin: auto;
+}
+
+.lapimg{
+    width: 320px;
+    height: 220px;
 }

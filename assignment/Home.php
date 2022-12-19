@@ -51,20 +51,100 @@
         
     </div>
     <h1 class="hdr">AVAILABLE PRODUCTS</h1>
-    <div class="imgs">
-    <img src="image/1.png" alt="no image">
-    <img src="image/2.png" alt="no image">  
-    <img src="image/3.png" alt="no image">
-    <img src="image/4.png" alt="no image">
-    <img src="image/5.png" alt="no image">
-    <img src="image/6.png" alt="no image">
-    <img src="image/7.png" alt="no image">
-    <img src="image/8.png" alt="no image">
-    <img src="image/9.png" alt="no image">
-    <img src="image/0.png" alt="no image">
-    <img src="image/10.png" alt="no image">
-    <img src="image/11.png" alt="no image">
-    </div>
+    <div id="search"> 
+        <form method="post" style="margin:auto;"> 
+        <input type="text" name="srh" placeholder="search" size="60" required>
+        <button name="btn" style="transition:none;"> Go </button>
+        </form>
+        </div>
+    <form id="right" method="post"> <label> Sort By:</label>
+        <select name="sorting" required>
+        <option> --Select Option-- </option>
+        <option value="low"> Price: Low to High </option>
+        <option value="high"> Price: High to Low </option>
+        </select>
+        <input type="submit" Value="Sort_Your_Products" name="btn2">
+        </form> <br><br><br><br>
+<?php
+//retrieve Data
+if (isset($_POST['btn'])) {
+?>
+<center>
+    <table>
+    <?php
+$st=$_POST['srh'];
+  $myquery="select * from `products` where `productname` like '%$st%'"; 
+$result= mysqli_query($con,$myquery);
+while ($row=mysqli_fetch_array($result)) {
+  ?>
+ <tr style="text-align: center;display: inline;"> 
+<td style="border: thin solid lightgrey;width:250px;"> <pre>
+<img src="<?php echo $row['image']; ?>">
+
+<b><?php echo $row['productname'];  ?> </b>
+<span style="color: blue; font-weight:bold;"><?php echo $row['price'];  ?> </span>
+</pre>
+ </td>
+
+
+  </tr>
+<?php
+}
+
+}
+?>
+</table></center>
+
+<?php
+//sort_Data
+if (isset($_POST['btn2'])) {
+  ?>
+  <center>
+    <table>
+      <?php
+  $opt=$_POST['sorting'];
+  if ($opt=="low") {
+    $qq="select * from `product` order by `price` ASC";
+    $re=mysqli_query($con,$qq);
+    while ($row=mysqli_fetch_array($re)) {
+      ?>
+<tr style="text-align: center;display: inline;"> 
+<td style="border: thin solid lightgrey;width:250px;"> <pre>
+<img src="<?php echo $row['image']; ?>">
+<b><?php echo $row['name'];  ?> </b>
+<span style="color: blue; font-weight:bold;"><?php echo $row['price'];  ?> </span>
+</pre>
+ </td>
+
+
+  </tr>
+
+      <?php
+    }
+  }else{
+$qq="SELECT * FROM `products` order by `price` DESC";
+    $re=mysqli_query($con,$qq);
+    while ($row=mysqli_fetch_array($re)) {
+      ?>
+<tr style="text-align: center;display: inline;"> 
+<td style="border: thin solid lightgrey;width:250px;"> <pre>
+<img class="lapimg" src="<?php echo $row['image']; ?>">
+
+<b><?php echo $row['productname'];  ?> </b>
+<span style="color: blue; font-weight:bold;"><?php echo $row['price'];  ?> </span>
+
+</pre>
+ </td>
+
+
+  </tr>
+<?php
+  }
+}
+}
+?>
+</table></center>
+    
     <div class="buysell">
         
         <div class="buy"><span>BUY!</span><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam modi vel, odio quis possimus dolore harum, hic ipsam quam blanditiis cum reprehenderit quia assumenda doloribus illum aspernatur, recusandae explicabo voluptatibus!
