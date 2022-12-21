@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laptopia</title>
     <link rel="stylesheet" href="home.css">
-    <script src="home.js"></script>
+    
     
 
 </head>
@@ -28,17 +28,19 @@
 <body>
     <div class="body1"> 
             <div class="dummy1">
-                <h1> <?php 
+                <h1> 
+                    <?php 
                 if(isset($_SESSION['success'])){
                     echo $_SESSION['success'];
                 };
+                //print hello
                 ?> 
                 <br><span class="sppan">
                 <?php
                 if(isset($_SESSION['name'])){
                     echo '<h1>'.$_SESSION['name'].'</h1>';
                 };
-
+                // print session name 
                 ?>
                 </span></h1><br>
                 <button id="frstbtn">
@@ -64,22 +66,24 @@
         <option value="high"> Price: High to Low </option>
         </select>
         <input type="submit" Value="Sort_Your_Products" name="btn2">
-        </form> <br><br><br><br>
+        </form> <br><br><br>
 <?php
 //retrieve Data
 if (isset($_POST['btn'])) {
 ?>
 <center>
-    <table>
+    <table style='display:flex; justify-content:center;'>
     <?php
 $st=$_POST['srh'];
   $myquery="select * from `products` where `productname` like '%$st%'"; 
 $result= mysqli_query($con,$myquery);
+//perfotms a query on a db
 while ($row=mysqli_fetch_array($result)) {
+//returns result in the shape of an array
   ?>
- <tr style="text-align: center;display: inline;"> 
-<td style="border: thin solid lightgrey;width:250px;"> <pre>
-<img src="<?php echo $row['image']; ?>">
+<tr style="text-align: center;display: inline; margin-left:150px;">
+<td style="border: thin solid lightgrey; width:250px; "> <pre>
+<img style = "width: 300px; height:200px; " src="<?php echo $row['image']; ?>">
 
 <b><?php echo $row['productname'];  ?> </b>
 <span style="color: blue; font-weight:bold;"><?php echo $row['price'];  ?> </span>
@@ -100,18 +104,18 @@ while ($row=mysqli_fetch_array($result)) {
 if (isset($_POST['btn2'])) {
   ?>
   <center>
-    <table>
+    <table style='display:flex; justify-content:center;'>
       <?php
   $opt=$_POST['sorting'];
   if ($opt=="low") {
-    $qq="select * from `product` order by `price` ASC";
+    $qq="select * from `products` order by `price` ASC";
     $re=mysqli_query($con,$qq);
     while ($row=mysqli_fetch_array($re)) {
       ?>
-<tr style="text-align: center;display: inline;"> 
+<tr style="text-align: center;display: inline; margin-left:150px;" > 
 <td style="border: thin solid lightgrey;width:250px;"> <pre>
-<img src="<?php echo $row['image']; ?>">
-<b><?php echo $row['name'];  ?> </b>
+<img style = "width: 300px; height:200px;" src="<?php echo $row['image']; ?>">
+<b><?php echo $row['productname'];  ?> </b>
 <span style="color: blue; font-weight:bold;"><?php echo $row['price'];  ?> </span>
 </pre>
  </td>
@@ -125,10 +129,11 @@ if (isset($_POST['btn2'])) {
 $qq="SELECT * FROM `products` order by `price` DESC";
     $re=mysqli_query($con,$qq);
     while ($row=mysqli_fetch_array($re)) {
+        
       ?>
-<tr style="text-align: center;display: inline;"> 
+<tr style="text-align: center;display: inline; margin-left:150px;"> 
 <td style="border: thin solid lightgrey;width:250px;"> <pre>
-<img class="lapimg" src="<?php echo $row['image']; ?>">
+<img style = "width: 300px; height:200px; " src="<?php echo $row['image'];?>">
 
 <b><?php echo $row['productname'];  ?> </b>
 <span style="color: blue; font-weight:bold;"><?php echo $row['price'];  ?> </span>
@@ -144,6 +149,7 @@ $qq="SELECT * FROM `products` order by `price` DESC";
 }
 ?>
 </table></center>
+<br>
     
     <div class="buysell">
         

@@ -2,6 +2,7 @@
 
 <?php
 if(!isset($_SESSION)){
+    //start session
     session_start();
 };
 
@@ -10,17 +11,19 @@ if(isset($_POST['submit'])){
     $email = mysqli_real_escape_string($con,$_POST['em']);
     $password1 = mysqli_real_escape_string($con,$_POST['psw1']);
     $password2 = mysqli_real_escape_string($con,$_POST['psw2']);
+    //Escape special characters in strings 
 
 
     if ($password1 != $password2){
-        echo "</br>Passwords don't match";
+        echo "<br>Passwords don't match";
     }
     else{
         $sql = "INSERT INTO users(username,email,password)Values('$username','$email','$password1')";
         mysqli_query($con,$sql);
         $_SESSION['name'] = $username;
+        //An associative array containing session variables available to the current script
         header('location:Log.php');
-        echo "</br>Welcome " . $_SESSION['name'];
+        echo "<br>Welcome " . $_SESSION['name'];
     }
     
 }

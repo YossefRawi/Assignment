@@ -13,7 +13,7 @@
 </head>
 <body>
     <h1>Login</h1>
-    <form method="post" action="index.php">
+    <form method="post" >
         <label for="uname" >username</label>
         <input type="text" name="uname"  required>
         <label for="pword" >password</label>

@@ -276,11 +276,9 @@ a:hover{
 }
 
 
-form{
+form ,pre ,tbody, tr ,table {
     margin: auto;
 }
 
-.lapimg{
-    width: 320px;
-    height: 220px;
-}
+
+
