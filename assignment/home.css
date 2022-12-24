@@ -181,7 +181,7 @@ a:hover{
     padding-right: 75px;
     padding-bottom: 25px;
 }
-.blue button{
+.blue{
     height: 50px;
     width: 120px;
     font-size: 20px;
@@ -271,8 +271,8 @@ a:hover{
     letter-spacing: 5px;
 }
 
-.btn{
-    transition: none;
+#btn2{
+    height:50px;
 }
 
 

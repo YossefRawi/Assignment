@@ -53,10 +53,11 @@
         
     </div>
     <h1 class="hdr">AVAILABLE PRODUCTS</h1>
+    <center>
     <div id="search"> 
         <form method="post" style="margin:auto;"> 
         <input type="text" name="srh" placeholder="search" size="60" required>
-        <button name="btn" style="transition:none;"> Go </button>
+        <button name="btn"  style="height:40px;"> Search </button>
         </form>
         </div>
     <form id="right" method="post"> <label> Sort By:</label>
@@ -65,8 +66,9 @@
         <option value="low"> Price: Low to High </option>
         <option value="high"> Price: High to Low </option>
         </select>
-        <input type="submit" Value="Sort_Your_Products" name="btn2">
+        <input type="submit" Value="Sort_Your_Products" name="btn2" >
         </form> <br><br><br>
+        </center>
 <?php
 //retrieve Data
 if (isset($_POST['btn'])) {
@@ -86,7 +88,7 @@ while ($row=mysqli_fetch_array($result)) {
 <img style = "width: 300px; height:200px; " src="<?php echo $row['image']; ?>">
 
 <b><?php echo $row['productname'];  ?> </b>
-<span style="color: blue; font-weight:bold;"><?php echo $row['price'];  ?> </span>
+<span style="color: blue; font-weight:bold;"> <?php echo $row['price'];  ?> </span>
 </pre>
  </td>
 

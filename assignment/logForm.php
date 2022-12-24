@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
     $r = mysqli_query($con,$t);
 
     if(mysqli_num_rows($r) == 1){
-        //Return the number of rows in a result set
+        //Go through every row in a table and find one that is true
         header('location:Home.php');
         $_SESSION['success'] = "<h1>Welcome</h1>";
         $_SESSION['name'] = $n;
