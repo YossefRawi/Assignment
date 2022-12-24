@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
         echo "<br>Passwords don't match";
     }
     else{
-        $sql = "INSERT INTO users(username,email,password)Values('$username','$email','$password1')";
+        $sql = "INSERT INTO users(username,email,password,password2) Values('$username','$email','$password1','$password2')";
         mysqli_query($con,$sql);
         $_SESSION['name'] = $username;
         //An session array varaible that stores the username 

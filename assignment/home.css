@@ -206,35 +206,9 @@ a:hover{
     margin-top: 100px;
 }
 
-.buysell{
-    margin: auto;
-    text-align: center;
-    margin-bottom: 35px;
-    width: 50%;
-    align-content: center;
-}
-.buy span,.sell span{
-    font-size: 30px;
-    text-align: center;
-    font-weight: bolder;
-    font-style: italic;
-}
-.buy,.sell{
-    font-size: 20px;
-    font-weight: bold;
-    border: #1f2937 1px solid;
-    border-radius: 10px;
-    padding: 10px;
-}
-.sell{
-    color: #1f2937;
-    margin-left: 150px; 
-}
-.buy{
-    color: white;
-    background-color: #1f2937;
-    margin-right: 150px;
-}
+
+
+
 .about{
     display: grid;
     grid-template-rows: 300px 300px;
@@ -279,6 +253,4 @@ a:hover{
 form ,pre ,tbody, tr ,table {
     margin: auto;
 }
-
-
 

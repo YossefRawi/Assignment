@@ -57,7 +57,9 @@
     <div id="search"> 
         <form method="post" style="margin:auto;"> 
         <input type="text" name="srh" placeholder="search" size="60" required>
-        <button name="btn"  style="height:40px;"> Search </button>
+        <button name="btn"  style="height:40px; width:50px;border: 1px white solid;
+    color:white ;
+    background-color: #1f2937;"> Search </button>
         </form>
         </div>
     <form id="right" method="post"> <label> Sort By:</label>
@@ -66,7 +68,9 @@
         <option value="low"> Price: Low to High </option>
         <option value="high"> Price: High to Low </option>
         </select>
-        <input type="submit" Value="Sort_Your_Products" name="btn2" >
+        <input type="submit" Value="Sort" name="btn2" style="height:40px; width:40px;border: 1px white solid;
+    color:white ;
+    background-color: #1f2937;">
         </form> <br><br><br>
         </center>
 <?php
@@ -153,15 +157,7 @@ $qq="SELECT * FROM `products` order by `price` DESC";
 </table></center>
 <br>
     
-    <div class="buysell">
-        
-        <div class="buy"><span>BUY!</span><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam modi vel, odio quis possimus dolore harum, hic ipsam quam blanditiis cum reprehenderit quia assumenda doloribus illum aspernatur, recusandae explicabo voluptatibus!
-        
-        </div>
-        <br>
-        <div class="sell"><span >SELL!</span><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto unde illo, similique quasi excepturi voluptatem porro, ipsa voluptatum architecto aperiam tempore et quisquam, laudantium quibusdam inventore cumque velit repudiandae.</div>
-
-    </div>
+   
     <h1 class="aboot">ABOUT US</h1>
     <div class="about">
         
